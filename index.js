@@ -108,10 +108,10 @@ app.get('/', (req, res) => {
   res.send('Read docs for more infos');
 });
 app.get(
-  '/api/extract/:name',
+  '/:category',
   async (req, res) => {
     const data = await extractData(
-      req.params.name
+      req.params.category
     );
     res.send(data);
   }
